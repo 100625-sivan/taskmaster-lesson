@@ -1,11 +1,12 @@
-name: Hello World Workflow
+name: Terraform deployment
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  hello-job:
+  echo_hello-world:
     runs-on: ubuntu-latest
 
     steps:
