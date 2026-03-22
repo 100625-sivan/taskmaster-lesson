@@ -1,14 +1,25 @@
 name: Terraform deployment
-
-on:
+on: 
   push:
     branches:
       - main
 
 jobs:
-  echo_hello-world:
+  echo_hello_world:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Say Hello
-        run: echo "hello world"
+      - name: First step
+        run: |
+          ls -al
+          echo '###############################'
+          pwd
+          echo '###############################'
+      - name: Check code
+        uses: actions/checkout@v4.3.1
+        
+      - name: Third step
+        run: |
+          ls -al
+          echo '###############################'
+          pwd
+          echo '###############################'
